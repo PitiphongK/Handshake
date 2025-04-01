@@ -1,92 +1,119 @@
-# SH18 Main
+# Handshake
+Handshake is a web application designed to foster collaboration between NatureScot and Scotland’s Higher Education sector. By enabling staff, researchers, and students to create profiles and find others with matching interests or activities, Handshake aims to encourage mutual partnerships that benefit both the academic and conservation communities.
 
+# Overview
+NatureScot recognized that many university departments across Scotland are engaged in work highly relevant to conservation and environmental management, yet collaboration between NatureScot staff and university personnel remains limited. Handshake addresses this gap by providing a centralized platform where:
 
-## Getting started
+Users (staff, researchers, and students) can register and display their conservation interests.
+Projects can be represented, allowing interested parties to find and potentially join them.
+Users can search for specific skills, interests, and geographical locations, then reach out via email to begin collaboration.
+By bridging these networks, Handshake aims to spark new partnerships and more effective conservation initiatives.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+# Features
+## User Registration
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Users must have an email address from an approved institution to register.
+They provide details such as name, institution, and areas of interest.
 
-## Add your files
+## Login & Authentication
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+Secure login with email and password.
+Once logged in, users are taken to a homepage where they can search for others.
+
+## Search & Filters
+
+Users can filter by interests, location, or areas of expertise.
+Projects can also be discovered via filtering criteria.
+## Profiles
+
+Each user or project has a dedicated profile page.
+Users can view profiles to learn more about specific interests or ongoing initiatives.
+## Contact
+
+Direct messaging within the platform is not available.
+Instead, users can reach out to each other via email (linked from the profile page).
+
+# Technology Stack
+* Backend: Django
+* Frontend: React (written in TypeScript)
+* Database: PostgreSQL
+* Communication: RESTful API between Django and React
+* Testing: Jest & django.test
+
+# Installation & Setup
+Follow these steps to get Handshake running locally:
+
+## Clone the Repository
 
 ```
-cd existing_repo
-git remote add origin https://stgit.dcs.gla.ac.uk/team-project-h/2024/sh18/sh18-main.git
-git branch -M main
-git push -uf origin main
+git clone https://stgit.dcs.gla.ac.uk/team-project-h/2024/sh18/sh18-main.git
+cd handshake
+
+```
+## Backend Setup (Django)
+
+* Navigate to the handshake (backend) folder.
+* Install dependencies:
+```
+pip install -r requirements.txt
+```
+* Run migrations:
+
+```
+python manage.py makemigrations
+python manage.py migrate
 ```
 
-## Integrate with your tools
+* Start the Django server:
+```
+python manage.py runserver
+```
 
-- [ ] [Set up project integrations](https://stgit.dcs.gla.ac.uk/team-project-h/2024/sh18/sh18-main/-/settings/integrations)
+## Frontend Setup (TS-React)
 
-## Collaborate with your team
+* Open a new terminal and navigate to the frontend folder:
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+```
+cd ./frontend
+```
 
-## Test and Deploy
+* Install dependencies:
 
-Use the built-in continuous integration in GitLab.
+```
+npm install
+```
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+* Run the development server:
 
-***
+```
+npm run
+```
 
-# Editing this README
+# Usage
+## Registration
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Visit the registration page and sign up with an approved institutional email.
+Provide necessary details: name, institution, location, interests, etc.
 
-## Suggestions for a good README
+## Login
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+Log in with the email and password you registered with.
+You’ll be redirected to the homepage.
 
-## Name
-Choose a self-explaining name for your project.
+## Searching
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+On the homepage, use the filters to find individuals or projects by interests, location, or other attributes.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+## Profile Viewing
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+Click on a user or project profile to see more details.
+Profiles display areas of interest, institution affiliation, and an email link to contact.
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+## Email Outreach
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+There is no direct messaging feature in the site itself.
+To connect, email the user at the address listed on their profile.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+# License
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+This project is licensed under the MIT License.
