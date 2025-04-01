@@ -1,0 +1,5 @@
+project/migrations
+AdminLists/migrations
+doorway/migrations
+superuser/migrations
+db.sqlite3

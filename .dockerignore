@@ -1,0 +1,4 @@
+# .dockerignore
+frontend/node_modules
+handshake/db.sqlite3
+handshake/media

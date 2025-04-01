@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Mulish';
+  line-height: 1.5;
+  font-weight: 400;
+
+  --color-primary-50: #eef7ff;
+  --color-primary-100: #d9ecff;
+  --color-primary-200: #bcdfff;
+  --color-primary-300: #8ecbff;
+  --color-primary-400: #59adff;
+  --color-primary-500: #348cff;
+  --color-primary-600: #1b6bf5;
+  --color-primary-700: #1455e1;
+  --color-primary-800: #1745b6;
+  --color-primary-900: #193d8f;
+  --color-primary-950: #142757;
+  --color-primary-500-rgb: rgb(52, 140, 255);
+
+  --color-neutral-50: #f5f7f8;
+  --color-neutral-100: #ecf1f3;
+  --color-neutral-200: #dde4e8;
+  --color-neutral-300: #c8d3d9;
+  --color-neutral-400: #b1bdc8;
+  --color-neutral-500: #9ca9b8;
+  --color-neutral-600: #8793a6;
+  --color-neutral-700: #737d8f;
+  --color-neutral-800: #5e6675;
+  --color-neutral-900: #4f5660;
+  --color-neutral-950: #2e3138;
+
+  --color-positive-50: #f1fcf9;
+  --color-positive-100: #cef9ec;
+  --color-positive-200: #9ef1d9;
+  --color-positive-300: #65e3c3;
+  --color-positive-400: #36cbaa;
+  --color-positive-500: #1eb899;
+  --color-positive-600: #148d77;
+  --color-positive-700: #147160;
+  --color-positive-800: #155a4f;
+  --color-positive-900: #164b42;
+  --color-positive-950: #062d28;
+
+  --color-negative-50: #fef3f2;
+  --color-negative-100: #fde5e3;
+  --color-negative-200: #fcd0cc;
+  --color-negative-300: #f9afa8;
+  --color-negative-400: #f38076;
+  --color-negative-500: #ea6357;
+  --color-negative-600: #d53b2d;
+  --color-negative-700: #b32e22;
+  --color-negative-800: #942920;
+  --color-negative-900: #7b2821;
+  --color-negative-950: #43100c;
+
+  --hue-info: 196;
+  --color-info-50: #f4f8fb;
+  --color-info-100: #e8f1f6;
+  --color-info-200: #daeaf0;
+  --color-info-300: #a0cbd9;
+  --color-info-400: #6dafc3;
+  --color-info-500: #4a95ad;
+  --color-info-600: #387991;
+  --color-info-700: #2f6175;
+  --color-info-800: #2a5362;
+  --color-info-900: #274653;
+  --color-info-950: #1a2d37;
+
+  --color-warning-50: #fdf9ed;
+  --color-warning-100: #f9edc8;
+  --color-warning-200: #f3dc94;
+  --color-warning-300: #edc45c;
+  --color-warning-400: #e9af36;
+  --color-warning-500: #e1901f;
+  --color-warning-600: #c76e18;
+  --color-warning-700: #a64f17;
+  --color-warning-800: #873e19;
+  --color-warning-900: #6f3318;
+  --color-warning-950: #3f1a09;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  color: var(--color-black);
+  background-color: var(--color-neutral-100);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+h3 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+h4 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+button {
+  font-family: 'Mulish';
+}
+
+input {
+  margin: 0;
+  font-size: 1rem !important;
+  font-weight: 400;
+}

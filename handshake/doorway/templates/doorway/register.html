@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Handshake</title>
+    </head>
+    <body>
+        <h1>Register</h1>
+        <div>
+            <form id="register" method="post" action="/doorway/register/">
+                {% csrf_token %}
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                {{ user_form }}
+                {{ profile_form }}
+                <input type="submit" name="submit"value="Register" />
+            </form>
+        </div>
+    </body>
+</html>

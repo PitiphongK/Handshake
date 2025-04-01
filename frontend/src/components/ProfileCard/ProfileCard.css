@@ -1,0 +1,91 @@
+.profile-card {
+    display: flex;
+    width: 500px;
+    padding: 1rem;
+    border-radius: 10px;
+    gap: 2rem;
+    background-color: var(--color-white);
+    transition: 0.1s;
+    /* outline: 2px var(--color-neutral-300) solid; */
+    cursor: pointer;
+}
+
+.profile-card:hover {
+    /* box-shadow: 0 0 10px 0 var(--color-neutral-400);
+    outline: 3px var(--color-neutral-400) solid; */
+    background-color: var(--color-neutral-50);
+}
+.profile-img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+.profile-header {
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.5rem; */
+    padding: 0.2rem 0;
+}
+
+.profile-content h2 {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.profile-content h3 {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.profile-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.location-info {
+    display: flex;
+    gap: 0.75rem;
+    color: var(--color-neutral-700);
+}
+
+.location-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.location-item>*:first-child {
+    color: var(--color-neutral-500);
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-info-200);
+    padding: 0.3rem 1.25rem;
+    border-radius: 5px;
+}
+
+.tag h4 {
+    color: var(--color-info-700);
+}
+
+.description {
+    padding-top: 0.4rem;
+    color: var(--color-neutral-600)
+}
+
+.work {
+    font-size: 0.9rem;
+    color: var(--color-neutral-900)
+}

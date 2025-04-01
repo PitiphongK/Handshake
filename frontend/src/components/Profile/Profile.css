@@ -1,0 +1,12 @@
+.profile-header-card,
+.about-section,
+.interests-section {
+    width: 60%;
+    margin: 20px auto;
+}
+
+.profile-header-card img {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}

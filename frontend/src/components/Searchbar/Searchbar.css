@@ -1,0 +1,26 @@
+.searchbar {
+    font-family: 'Mulish', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    width: 20rem;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    border: 1px black;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    background-color: var(--color-primary-400);
+    color: white;
+    
+}
+
+.searchbar::placeholder {
+    color: white;
+}
+
+
+/* //:focus */
+.searchbar:focus {
+    outline: none;
+}
+
+.serachbar input {
+    outline: none; /* Remove focus outline */
+}

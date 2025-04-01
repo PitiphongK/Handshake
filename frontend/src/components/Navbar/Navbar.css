@@ -1,0 +1,73 @@
+.navbar {
+    position: sticky;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: var(--color-primary-500);
+    color: var(--color-white);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1.5rem;
+    transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+    z-index: 1000;
+    min-height: 72px;
+}
+
+.navbar.scrolled {
+    background: rgba(37, 132, 255, 0.877);
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.popup {
+    position: absolute;
+    top: 3.5rem;
+    right: -1.5rem;
+    background-color: white;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    padding: 0.25rem 0;
+    z-index: 1000;
+    transition: opacity 0.1s ease-in-out;
+    opacity: 0%;
+    pointer-events: none;
+}
+
+.popup.visible {
+    opacity: 100%;
+    pointer-events: auto;
+}
+
+.profile-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile-icon:hover {
+    outline: 0.2rem solid var(--color-primary-400);
+}
+
+.profile-icon:active {
+    outline: 0.2rem solid var(--color-primary-300);
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 72px;
+}
